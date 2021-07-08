@@ -91,27 +91,34 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }, true);
-
         mNetty.setOnConnectListener(new Netty.OnConnectListener() {
             @Override
             public void onSuccess() {
                 //TODO 连接成功
                 showToast("连接成功");
+                Log.e(ANetty.TAG,"TAG====连接成功");
+
             }
 
             @Override
             public void onFailed() {
                 //TODO 连接失败
                 showToast("连接失败");
+                Log.e(ANetty.TAG,"TAG====连接成功");
+
+
             }
 
             @Override
             public void onError(Exception e) {
                 //TODO 连接异常
                 showToast("连接异常");
+                Log.e(ANetty.TAG,"TAG====连接异常");
+
                 Log.e(ANetty.TAG,e.getMessage());
             }
         });
+
 
         mNetty.setOnSendMessageListener(new Netty.OnSendMessageListener() {
             @Override

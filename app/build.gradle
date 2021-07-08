@@ -39,12 +39,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation deps.test.junit
-    androidTestImplementation deps.test.runner
-    androidTestImplementation deps.test.espresso
-
-    implementation deps.support.appcompat
-    implementation deps.support.constraintlayout
+//    testImplementation deps.test.junit
+//    androidTestImplementation deps.test.runner
+//    androidTestImplementation deps.test.espresso
+//
+//    implementation deps.support.appcompat
+//    implementation deps.support.constraintlayout
 
     implementation project(':lib')
 

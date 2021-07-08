@@ -28,10 +28,10 @@ versions.espresso = "3.0.2"
 
 //support
 def support = [:]
-support.design = "com.android.support:design:$versions.supportLibrary"
-support.appcompat = "com.android.support:appcompat-v7:$versions.supportLibrary"
-support.constraintlayout = "com.android.support.constraint:constraint-layout:$versions.constraintLayout"
-deps.support = support
+//support.design = "com.android.support:design:$versions.supportLibrary"
+//support.appcompat = "com.android.support:appcompat-v7:$versions.supportLibrary"
+//support.constraintlayout = "com.android.support.constraint:constraint-layout:$versions.constraintLayout"
+//deps.support = support
 
 //test
 def test = [:]
