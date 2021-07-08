@@ -80,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 //接收到消息
                 tvContent.append(msg + "\n");
                 showToast("msg==="+msg);
+                Log.e("ANetty.TAG","TAG====onMessageReceived="+msg);
+
 
             }
 
@@ -87,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
             public void onExceptionCaught(ChannelHandlerContext ctx,Throwable e) {
                 Log.e(ANetty.TAG,e.getMessage());
                 showToast("msg==="+e.getMessage());
+                Log.e("ANetty.TAG","TAG====onExceptionCaught="+e.getMessage());
+
 
 
             }
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess() {
                 //TODO 连接成功
                 showToast("连接成功");
-                Log.e(ANetty.TAG,"TAG====连接成功");
+                Log.e("ANetty.TAG","TAG====连接成功");
 
             }
 
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailed() {
                 //TODO 连接失败
                 showToast("连接失败");
-                Log.e(ANetty.TAG,"TAG====连接成功");
+                Log.e("ANetty.TAG","TAG====连接成功");
 
 
             }
@@ -113,9 +117,9 @@ public class MainActivity extends AppCompatActivity {
             public void onError(Exception e) {
                 //TODO 连接异常
                 showToast("连接异常");
-                Log.e(ANetty.TAG,"TAG====连接异常");
+                Log.e("ANetty.TAG","TAG====连接异常");
 
-                Log.e(ANetty.TAG,e.getMessage());
+                Log.e("ANetty.TAG",e.getMessage());
             }
         });
 
@@ -155,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         //连接Netty
+        boolean connected = mNetty.isConnected();
+        Log.e("ANetty.TAG","TAG====connected====="+connected);
         mNetty.connect(mHost,mPort);
     }
 
@@ -167,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
             mNetty.sendMessage(msg);
         }else{
             showToast("Netty未连接");
+
         }
 
     }
